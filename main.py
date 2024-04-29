@@ -37,7 +37,11 @@ data = [
 
 results = []
 
-@app.get('/predict/')
+@app.get('/')
+def test():
+   return 'chitima chafergurson'
+
+@app.get('/predict')
 def hello():
     model = load_model('native_model')
     for i in range(len(data)):
