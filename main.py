@@ -43,7 +43,7 @@ def test():
 
 @app.get('/predict')
 def hello():
-    model = load_model('native_model')
+    model = load_model('native_model.h5')
     for i in range(len(data)):
         img = imread(data[i]['img_path'])
         pred_img = load_and_prep_image(img)
